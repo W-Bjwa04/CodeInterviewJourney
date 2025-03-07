@@ -6,9 +6,9 @@ class Solution(object):
         hashmap = dict()
 
         for i in  range(len(nums)):
-            currentNumber = nums[i]
             
-            remainder = target - currentNumber 
+            
+            remainder = target - nums[i]
 
             # check if the remainder exits in the hahmap or not
 
@@ -16,7 +16,7 @@ class Solution(object):
                 return [hashmap.get(remainder),i]
             
             # else add the current number in the hashmap 
-            hashmap[currentNumber] = i
+            hashmap[nums[i]] = i
 
         return []
 
